@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#1B2618"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="200" fill="#C9E265">B4A</text></svg></template>
+<meta name="ext-resource-dependency" content="logo.png">
+<meta name="ext-resource-dependency" content="assets/team/melvin.jpg">
+<meta name="ext-resource-dependency" content="assets/opt/team-herwin.jpg">
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Opleidingen | BIM4ALL Academie</title>
+<meta property="og:title" content="Opleidingen | BIM4ALL Academie"><meta property="og:description" content="Alle opleidingen rond AI, BIM, data, samenwerking en leiderschap voor bouw, installatie en vastgoed. Prijs, data en programma staan erbij. Direct inschrijven."><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><meta name="theme-color" content="#1B2618">
+<meta name="description" content="Alle opleidingen rond AI, BIM, data, samenwerking en leiderschap voor bouw, installatie en vastgoed. Prijs, data en programma staan erbij. Direct inschrijven.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="opleidingen-data.js"></script>
+<style>
+  .b4a-skip { position: absolute; left: 16px; top: -60px; z-index: 200; background: #1B2618; color: #FBFAF6; padding: 12px 18px; font-weight: 600; font-size: 15px; transition: top 0.15s; }
+  .b4a-skip:focus { top: 12px; outline: 2px solid #C9E265; }
+  html { scroll-padding-top: 90px; }
+  img { max-width: 100%; }
+  @media (max-width: 720px) { html { scroll-padding-top: 76px; } }
+  body { margin: 0; font-family: 'Figtree', sans-serif; color: #1B2618; background: #FBFAF6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #3F5741; }
+  :focus-visible { outline: 2px solid #1B2618; outline-offset: 3px; }
+  @keyframes plekPuls { 0% { box-shadow: 0 0 0 0 rgba(201,226,101,0.8); } 70% { box-shadow: 0 0 0 7px rgba(201,226,101,0); } 100% { box-shadow: 0 0 0 0 rgba(201,226,101,0); } }
+  @media (prefers-reduced-motion: reduce) { .plek-puls { animation: none !important; } }
+  /* Animaties: rustige scroll-reveal per sectie, hero-inloop, kerngetallen */
+  @keyframes b4aHeroIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  [data-screen-label] > main > section:first-of-type > div > *, [data-screen-label] > section:first-of-type > div > * { animation: b4aHeroIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(2) { animation-delay: 0.12s; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(3) { animation-delay: 0.24s; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(4) { animation-delay: 0.36s; }
+  .b4a-reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .b4a-reveal.b4a-in { opacity: 1; transform: none; }
+  .b4a-stagger > * { opacity: 0; transform: translateY(14px); transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .b4a-stagger.b4a-in > * { opacity: 1; transform: none; }
+  .b4a-stagger.b4a-in > *:nth-child(2) { transition-delay: 0.08s; } .b4a-stagger.b4a-in > *:nth-child(3) { transition-delay: 0.16s; } .b4a-stagger.b4a-in > *:nth-child(4) { transition-delay: 0.24s; } .b4a-stagger.b4a-in > *:nth-child(5) { transition-delay: 0.32s; } .b4a-stagger.b4a-in > *:nth-child(6) { transition-delay: 0.4s; }
+  [data-screen-label] img { transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  [data-screen-label] a:hover > img { transform: scale(1.02); }
+  @media (prefers-reduced-motion: reduce) { .b4a-reveal, .b4a-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; } [data-screen-label] > main > section:first-of-type > div > *, [data-screen-label] > section:first-of-type > div > * { animation: none !important; } }
+</style>
+<script src="b4a-motion.js"></script>
+</helmet>
+<div data-screen-label="Opleidingen v4" style="overflow-x: clip; overflow-y: visible;">
+  <a href="#inhoud" class="b4a-skip">Naar de inhoud</a>
+  <dc-import name="nav" style="position: sticky; top: 0; z-index: 100; display: block;" hint-size="100%,76px"></dc-import>
+  <main id="inhoud">
+
+  <section style="border-bottom: 1px solid #E6E4DC;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(40px, 5vw, 72px) clamp(20px, 4vw, 56px) clamp(32px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 32px clamp(32px, 5vw, 96px); align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Open inschrijving</span>
+        <h1 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(38px, 4.6vw, 64px); font-weight: 500; line-height: 1.02; text-wrap: pretty;">Opleidingen voor de digitale bouwpraktijk</h1>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5246; max-width: 52ch;">Technisch én menselijk, want moderne professionals hebben beide nodig. Kies een opleiding, kies een datum en schrijf je in. Prijs, data en programma staan erbij.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px 24px; align-items: start; align-content: start; margin-top: 30px;">
+        <div style="display: flex; gap: 8px;"><img src="assets/opt/team-herwin.jpg" alt="Herwin Voortman" style="width: clamp(120px, 11vw, 160px); height: clamp(120px, 11vw, 160px); object-fit: cover; object-position: top; display: block;" fetchPriority="high"><img src="assets/team/melvin.jpg" alt="Melvin van Puffelen" style="width: clamp(120px, 11vw, 160px); height: clamp(120px, 11vw, 160px); object-fit: cover; object-position: top; display: block;" loading="lazy" decoding="async"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0;"><span style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500;">Persoonlijk advies</span><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A5246;">Twijfel je welke opleiding past? Herwin en Melvin kennen elke opleiding van binnen en denken in tien minuten met je mee.</p></div>
+        <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; align-items: flex-start;">
+          <a href="tel:+31548376797" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; color: #1B2618; border: 1px solid #1B2618; padding: 10px 14px; min-height: 44px;" style-hover="background: #1B2618; color: #FBFAF6;">Bel Herwin: 0548 37 67 97</a>
+          <a href="https://wa.me/31634274873" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; color: #1B2618; border: 1px solid #1B2618; padding: 10px 14px; min-height: 44px;" style-hover="background: #1B2618; color: #FBFAF6;">Stuur een WhatsApp</a>
+          <a href="contact.dc.html?onderwerp=brochure" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; color: #FBFAF6; background: #1B2618; padding: 11px 14px; min-height: 44px;" style-hover="background: #3F5741;">Brochure aanvragen →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section style="border-top: 1px solid #E6E4DC; border-bottom: 1px solid #E6E4DC;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 56px); display: flex; flex-direction: column; gap: 12px;">
+      <div role="group" aria-label="Categorie" style="display: flex; flex-wrap: wrap; gap: 6px;">
+        <sc-for list="{{ cats }}" as="c" hint-placeholder-count="7">
+          <button type="button" onClick="{{ c.kies }}" aria-pressed="{{ c.actief }}" style="cursor: pointer; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid {{ c.rand }}; background: {{ c.bg }}; color: {{ c.kleur }}; min-height: 38px;">{{ c.label }}</button>
+        </sc-for>
+      </div>
+      <div role="group" aria-label="Lesvorm" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px;">
+        <sc-for list="{{ vormen }}" as="v" hint-placeholder-count="4">
+          <button type="button" onClick="{{ v.kies }}" aria-pressed="{{ v.actief }}" style="cursor: pointer; background: none; border: none; padding: 6px 0; font: inherit; font-size: 14px; font-weight: 600; color: {{ v.kleur }}; border-bottom: 2px solid {{ v.rand }};">{{ v.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(32px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(52px, 6.5vw, 88px); display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px 32px;">
+        <div style="display: flex; flex-direction: column; gap: 8px; max-width: 64ch;"><h2 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(28px, 2.8vw, 40px); font-weight: 500; line-height: 1.1;">{{ catTitel }}</h2><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A5246;">{{ catIntro }}</p></div>
+        <p style="margin: 0; font-size: 13px; color: #6B7263;">{{ telling }}</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px;">
+        <sc-for list="{{ lijst }}" as="o" hint-placeholder-count="9">
+          <article style="background: #FFFFFF; border: 1px solid #E6E4DC; display: flex; flex-direction: column;">
+            <a href="{{ o.href }}" style="padding: 24px 24px 20px; display: flex; flex-direction: column; gap: 12px; flex: 1; color: #1B2618;" style-hover="color: #3F5741;">
+              <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;"><span>{{ o.categorie }}</span><span style="font-weight: 500; letter-spacing: 0; text-transform: none;">{{ o.niveau }}</span></div>
+              <span style="font-family: 'Newsreader', serif; font-size: 24px; font-weight: 500; line-height: 1.15;">{{ o.naam }}</span>
+              <span style="font-size: 14px; line-height: 1.5; color: #4A5246;">{{ o.doelgroep }}</span>
+              <dl style="margin: 12px 0 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; font-size: 14px; color: #1B2618;">
+                <dt style="color: #6B7263;">Start</dt><dd style="margin: 0; font-weight: 600; font-size: 15px;">{{ o.start }}</dd>
+                <dt style="color: #6B7263;">Duur</dt><dd style="margin: 0; color: #4A5246;">{{ o.duur }}</dd>
+                <dt style="color: #6B7263;">Vorm</dt><dd style="margin: 0; color: #4A5246;">{{ o.vormLocatie }}</dd>
+              </dl>
+            </a>
+            <div style="border-top: 1px solid #E6E4DC; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+              <span style="font-family: 'Newsreader', serif; font-size: 24px; font-weight: 500;">{{ o.prijsTekst }}<span style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #6B7263; font-weight: 400; margin-left: 6px;">excl. btw</span></span>
+              <a href="{{ o.hrefInschrijven }}" style="font-size: 14px; font-weight: 600; color: #FBFAF6; background: #1B2618; padding: 10px 16px; border-radius: 999px; white-space: nowrap;" style-hover="background: #3F5741;">Schrijf je in</a>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+      <sc-if value="{{ leeg }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0; font-size: 15px; color: #4A5246;">Geen opleiding in deze combinatie. Kies een andere vorm of bel 0548 37 67 97; incompany kan in elke vorm.</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- Agenda -->
+  <section id="agenda" style="background: #F1EFE7; border-top: 1px solid #E6E4DC;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 40px 80px;">
+      <div style="display: flex; flex-direction: column; gap: 14px; align-self: start;">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Agenda en events</span>
+        <h2 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(32px, 3.4vw, 48px); font-weight: 500; line-height: 1.08;">Eerstvolgende startdata</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4A5246; max-width: 42ch;">Open inschrijving centraal in Utrecht of online. Kleine groepen, maximaal 10 deelnemers.</p>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ agenda }}" as="a" hint-placeholder-count="8">
+          <a href="{{ a.href }}" style="display: grid; grid-template-columns: 150px minmax(0, 1fr) auto; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid #D9D5C8; color: #1B2618; font-size: 15px;" style-hover="color: #3F5741;">
+            <span style="font-family: 'Newsreader', serif; font-size: 18px; font-style: italic; color: #4A5246;">{{ a.datum }}</span>
+            <span style="font-weight: 600;">{{ a.naam }}<span style="font-weight: 400; color: #6B7263;"> · {{ a.vorm }}</span></span>
+            <span style="font-size: 13px; color: {{ a.plekKleur }}; white-space: nowrap;">{{ a.plekTekst }}</span>
+          </a>
+        </sc-for>
+        <div style="border-top: 1px solid #D9D5C8;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Incompany upsell -->
+  <section style="background: #F1EFE7; border-top: 1px solid #E6E4DC;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(52px, 6.5vw, 88px) clamp(20px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 32px clamp(32px, 5vw, 96px); align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Incompany en maatwerk</span>
+        <h2 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(32px, 3.4vw, 48px); font-weight: 500; line-height: 1.08; text-wrap: pretty;">Meer mensen opleiden?</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5246; max-width: 52ch;">Wil je meerdere collega's ontwikkelen of een opleiding onderdeel maken van een groter leerprogramma? Dan kijken we graag mee. Vanaf zes deelnemers is incompany vaak al voordeliger.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 24px;">
+          <a href="incompany.dc.html" style="font-weight: 600; font-size: 15px; text-decoration: underline; text-decoration-color: #C9E265; text-decoration-thickness: 2px; text-underline-offset: 5px;">Bespreek de mogelijkheden →</a>
+          <a href="tel:+31634274873" style="font-weight: 600; font-size: 15px; text-decoration: underline; text-decoration-color: #C9E265; text-decoration-thickness: 2px; text-underline-offset: 5px;">Bel Melvin: 06 342 748 73</a>
+        </div>
+        <a href="zelfscan.dc.html" style="font-size: 14px; color: #4A5246; align-self: flex-start; text-decoration: underline; text-underline-offset: 3px;">Eerst weten wat je organisatie nodig heeft? Doe de zelfscan</a>
+      </div>
+      <img src="assets/opt/sfeer-presentatie.jpg" alt="Trainer geeft uitleg aan een groep" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;">
+    </div>
+  </section>
+
+  </main>
+  <dc-import name="footer" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cat: 'alle', vorm: 'alle' };
+  componentDidMount() {
+    const p = new URLSearchParams(location.search);
+    const next = {};
+    if (p.get('cat')) next.cat = p.get('cat');
+    if (p.get('vorm')) next.vorm = p.get('vorm');
+    if (Object.keys(next).length) this.setState(next);
+    if (!window.B4A_OPLEIDINGEN) { this._poll = setInterval(() => { if (window.B4A_OPLEIDINGEN) { clearInterval(this._poll); this.forceUpdate(); } }, 60); }
+  }
+  componentWillUnmount() { clearInterval(this._poll); if (this._ld) this._ld.remove(); }
+  schema(alle) {
+    if (!alle.length) return;
+    if (!this._ld) { this._ld = document.createElement('script'); this._ld.type = 'application/ld+json'; document.head.appendChild(this._ld); }
+    this._ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: alle.map((o, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Course', name: o.naam, description: o.belofte, url: 'https://www.bim4all-academie.nl/opleidingen/' + o.id, provider: { '@type': 'Organization', name: 'BIM4ALL Academie' }, offers: { '@type': 'Offer', price: o.prijs, priceCurrency: 'EUR', category: 'Paid' }, hasCourseInstance: o.data.map((d) => ({ '@type': 'CourseInstance', courseMode: o.vorm === 'Online' ? 'Online' : (o.vorm === 'Blended' ? 'Blended' : 'Onsite'), startDate: d, courseWorkload: 'P' + (o.aantalDagen || 1) + 'D' })) } })) });
+  }
+  renderVals() {
+    const alle = window.B4A_OPLEIDINGEN || [];
+    this.schema(alle);
+    const { cat, vorm } = this.state;
+    const eur = (n) => '€ ' + n.toLocaleString('nl-NL');
+    const catDefs = [['alle', 'Alles'], ['AI', 'AI & digitalisering'], ['BIM', 'BIM & software'], ['Data', 'Data & informatie'], ['Mens', 'Mens & samenwerking'], ['Leiderschap', 'Leiderschap & verandering'], ['Functie', 'Functiegericht']];
+    const vormDefs = [['alle', 'Alle vormen'], ['Klassikaal', 'Klassikaal'], ['Online', 'Online'], ['Blended', 'Blended']];
+    const intros = { alle: 'Twintig opleidingen voor bouw, installatie en vastgoed: van AI en BIM tot samenwerken en leidinggeven. Kleine groepen, eigen projecten, prijs en data staan erbij.', AI: 'AI toepassen in het dagelijkse werk en er verantwoord beleid op maken. Voor werkvoorbereiders tot directie.', BIM: 'Revit, Solibri en Autodesk Construction Cloud: de software waar de bouw mee werkt, geoefend op eigen projecten.', Data: 'Informatie-eisen, ILS en data-analyse. Voor wie modellen coördineert of er sturing uit wil halen.', Mens: 'Communiceren, feedback en samenwerken in de digitale keten. De kant die met AI belangrijker wordt, niet minder.', Leiderschap: 'Verandering leiden en nieuwe werkwijzen laten landen. Voor leidinggevenden, projectleiders en digital leads.', Functie: 'Complete leerpaden per functie: werkvoorbereider, modelleur en projectleider. Technisch en menselijk door elkaar.' };
+    const cats = catDefs.map(([k, label]) => { const a = cat === k; const n = k === 'alle' ? alle.length : alle.filter((o) => o.cat === k).length; return { label: k === 'alle' ? 'Alles' : label + (n ? ' (' + n + ')' : ''), actief: a, kies: () => this.setState({ cat: k }), bg: a ? '#1B2618' : 'transparent', kleur: a ? '#FBFAF6' : '#1B2618', rand: a ? '#1B2618' : '#D9D5C8' }; });
+    const catTitel = cat === 'alle' ? 'Alle opleidingen' : (catDefs.find(([k]) => k === cat) || [])[1];
+    const catIntro = intros[cat] || intros.alle;
+    const vormen = vormDefs.map(([k, label]) => { const a = vorm === k; return { label, actief: a, kies: () => this.setState({ vorm: k }), kleur: a ? '#1B2618' : '#6B7263', rand: a ? '#C9E265' : 'transparent' }; });
+    const lijst = alle.filter((o) => (cat === 'alle' || o.cat === cat) && (vorm === 'alle' || o.vorm === vorm)).map((o) => ({
+      ...o, href: 'opleiding.dc.html?o=' + o.id, hrefInschrijven: 'opleiding.dc.html?o=' + o.id + '#inschrijven',
+      vormLocatie: o.vorm === 'Online' ? 'Online' : o.vorm + ', ' + o.locatie, start: o.data[0].replace(' 2026', '').replace(' 2027', ' 2027'), prijsTekst: eur(o.prijs),
+    }));
+    const maanden = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+    const parse = (s) => { const [d, m, y] = s.split(' '); return new Date(+y, maanden.indexOf(m), +d); };
+    const agenda = alle.flatMap((o) => o.data.map((d) => ({ datum: d.replace(/ \d{4}$/, ''), t: parse(d), naam: o.naam, vorm: o.vorm, href: 'opleiding.dc.html?o=' + o.id, plekken: o.plekken })))
+      .sort((a, b) => a.t - b.t).slice(0, 8)
+      .map((a) => { const weinig = typeof a.plekken === 'number' && a.plekken <= 4; const tekst = weinig ? (a.plekken === 1 ? 'Nog 1 plek' : 'Nog ' + a.plekken + ' plekken') : 'Plek beschikbaar'; return { ...a, plekTekst: tekst, plekKleur: weinig ? '#1B2618' : '#6B7263', plekDot: React.createElement('span', { 'aria-hidden': true, className: weinig ? 'plek-puls' : '', style: { width: 8, height: 8, borderRadius: '50%', background: weinig ? '#C9E265' : '#D9D5C8', display: 'inline-block', animation: weinig ? 'plekPuls 1.8s ease-out infinite' : 'none' } }) }; });
+    return { cats, vormen, lijst, catTitel, catIntro, leeg: alle.length > 0 && lijst.length === 0, telling: lijst.length + ' van ' + alle.length + ' opleidingen', agenda };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Figtree', sans-serif; color: #1B2618; background: #FBFAF6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #1B2618; }
+  @keyframes navIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  @keyframes waPuls { 0% { box-shadow: 0 0 0 0 rgba(201,226,101,0.7); } 70% { box-shadow: 0 0 0 8px rgba(201,226,101,0); } 100% { box-shadow: 0 0 0 0 rgba(201,226,101,0); } }
+  @media (prefers-reduced-motion: reduce) { .wa-puls { animation: none !important; } }
+</style>
+</helmet>
+<header onMouseLeave="{{ sluitLater }}" onBlur="{{ focusWeg }}" style="position: relative; z-index: 60; background: #FBFAF6; border-bottom: 1px solid #E6E4DC;">
+  <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+  <div aria-label="Organisatie" style="background: #1B2618; color: #D5DEC6; overflow: hidden; height: {{ topbarHoogte }}; transition: height 0.2s ease;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); height: 38px; display: flex; align-items: center; justify-content: flex-end; gap: 28px; font-size: 13px; font-weight: 500;">
+      <a href="over-ons.dc.html" style="color: #D5DEC6;" style-hover="color: #C9E265;">Over ons</a>
+      <a href="werken-bij.dc.html" style="color: #D5DEC6;" style-hover="color: #C9E265;">Werken bij</a>
+      <a href="contact.dc.html" style="color: #D5DEC6;" style-hover="color: #C9E265;">Contact</a>
+      <a href="tel:+31548376797" style="color: #FBFAF6; font-weight: 600; display: flex; align-items: center; gap: 8px;" style-hover="color: #C9E265;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>0548 37 67 97</a>
+      <a href="#" aria-disabled="true" title="Link leeromgeving: te bepalen door BIM4ALL" style="color: #FBFAF6; font-weight: 600; display: flex; align-items: center; gap: 8px; padding-left: 28px; border-left: 1px solid rgba(213,222,198,0.25);" style-hover="color: #C9E265;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Inloggen leeromgeving</a>
+    </div>
+  </div>
+  </sc-if>
+  <div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; align-items: center; justify-content: space-between; gap: 32px; height: 76px;">
+    <a href="homepage.dc.html" aria-label="BIM4ALL Academie, naar de homepage" style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;"><img src="logo.png" alt="BIM4ALL Academie" style="height: 34px; display: block;"></a>
+
+    <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+    <nav aria-label="Hoofdnavigatie" style="display: flex; align-items: stretch; gap: 4px; align-self: stretch; font-size: 15px; font-weight: 500;">
+      <button type="button" onMouseEnter="{{ openOplossingen }}" onClick="{{ toggleOplossingen }}" aria-haspopup="true" aria-expanded="{{ oplossingenOpen }}" style="cursor: pointer; background: none; border: none; font: inherit; color: #1B2618; padding: 0 14px; display: flex; align-items: center; gap: 6px; box-shadow: inset 0 -3px 0 {{ actief.oplossingen }};" style-hover="color: #3F5741;">Oplossingen <span aria-hidden="true" style="font-size: 10px; opacity: 0.6;">▾</span></button>
+      <button type="button" onMouseEnter="{{ openOpleidingen }}" onClick="{{ toggleOpleidingen }}" aria-haspopup="true" aria-expanded="{{ opleidingenOpen }}" style="cursor: pointer; background: none; border: none; font: inherit; color: #1B2618; padding: 0 14px; display: flex; align-items: center; gap: 6px; box-shadow: inset 0 -3px 0 {{ actief.opleidingen }};" style-hover="color: #3F5741;">Opleidingen <span aria-hidden="true" style="font-size: 10px; opacity: 0.6;">▾</span></button>
+      <button type="button" onMouseEnter="{{ openIncompany }}" onClick="{{ toggleIncompany }}" aria-haspopup="true" aria-expanded="{{ incompanyOpen }}" style="cursor: pointer; background: none; border: none; font: inherit; color: #1B2618; padding: 0 14px; display: flex; align-items: center; gap: 6px; box-shadow: inset 0 -3px 0 {{ actief.incompany }};" style-hover="color: #3F5741;">Incompany <span aria-hidden="true" style="font-size: 10px; opacity: 0.6;">▾</span></button>
+      <a href="events.dc.html" onMouseEnter="{{ sluit }}" style="display: flex; align-items: center; padding: 0 14px; color: #1B2618; box-shadow: inset 0 -3px 0 {{ actief.events }};" style-hover="color: #3F5741;">Events</a>
+      <a href="referenties.dc.html" onMouseEnter="{{ sluit }}" style="display: flex; align-items: center; padding: 0 14px; color: #1B2618; box-shadow: inset 0 -3px 0 {{ actief.referenties }};" style-hover="color: #3F5741;">Referenties</a>
+      <a href="inspiratie.dc.html" onMouseEnter="{{ sluit }}" style="display: flex; align-items: center; padding: 0 14px; color: #1B2618; box-shadow: inset 0 -3px 0 {{ actief.inspiratie }};" style-hover="color: #3F5741;">Inspiratie</a>
+    </nav>
+    <div onMouseEnter="{{ sluit }}" style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+      <a href="zelfscan.dc.html" style="font-size: 14px; font-weight: 600; color: #1B2618; padding: 10px 18px; border: 1px solid #1B2618; border-radius: 999px;" style-hover="background: #1B2618; color: #FBFAF6;">Doe de zelfscan</a>
+      <a href="contact.dc.html" style="font-size: 14px; font-weight: 600; color: #FBFAF6; background: #1B2618; padding: 11px 18px; border-radius: 999px; display: flex; align-items: center; gap: 8px;" style-hover="background: #3F5741;">Plan een gesprek</a>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ mobiel }}" hint-placeholder-val="{{ false }}">
+    <button type="button" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="cursor: pointer; background: none; border: 1px solid #1B2618; border-radius: 999px; padding: 10px 16px; font: inherit; font-size: 14px; font-weight: 600; color: #1B2618;">{{ menuLabel }}</button>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ oplossingenOpen }}" hint-placeholder-val="{{ false }}">
+  <div onMouseEnter="{{ blijf }}" style="position: absolute; left: 0; right: 0; top: 100%; background: #FBFAF6; border-bottom: 1px solid #E6E4DC; box-shadow: 0 24px 48px -24px rgba(27,38,24,0.25); animation: navIn 0.18s ease both;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 56px) 32px; display: grid; grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr); gap: 48px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Consultancy en ontwikkeling, los of samen</span>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #1B2618;">
+          <a href="strategy.dc.html" style="display: flex; flex-direction: column; gap: 12px; padding: 20px 24px 20px 0;  color: #1B2618;" style-hover="color: #3F5741;"><span style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Newsreader', serif; font-size: 30px; font-weight: 500; line-height: 1;">01</span><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding-bottom: 2px; border-bottom: 2px solid #C9E265;">Strategy</span></span><span style="font-family: 'Newsreader', serif; font-size: 20px; font-weight: 500; line-height: 1.2; text-wrap: pretty; max-width: 22ch;">Van ambitie naar een duidelijke koers</span></a>
+          <a href="transformation.dc.html" style="display: flex; flex-direction: column; gap: 12px; padding: 20px 24px 20px 24px; border-left: 1px solid #E6E4DC; color: #1B2618;" style-hover="color: #3F5741;"><span style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Newsreader', serif; font-size: 30px; font-weight: 500; line-height: 1;">02</span><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding-bottom: 2px; border-bottom: 2px solid #C9E265;">Transformation</span></span><span style="font-family: 'Newsreader', serif; font-size: 20px; font-weight: 500; line-height: 1.2; text-wrap: pretty; max-width: 22ch;">Van plan naar verandering in de praktijk</span></a>
+          <a href="capability.dc.html" style="display: flex; flex-direction: column; gap: 12px; padding: 20px 24px 20px 24px; border-left: 1px solid #E6E4DC; color: #1B2618;" style-hover="color: #3F5741;"><span style="display: flex; align-items: baseline; gap: 10px;"><span style="font-family: 'Newsreader', serif; font-size: 30px; font-weight: 500; line-height: 1;">03</span><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding-bottom: 2px; border-bottom: 2px solid #C9E265;">Capability</span></span><span style="font-family: 'Newsreader', serif; font-size: 20px; font-weight: 500; line-height: 1.2; text-wrap: pretty; max-width: 22ch;">Zorgen dat mensen het kunnen</span></a>
+        </div>
+        <div style="margin-top: 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px;">
+          <a href="voor-organisaties.dc.html" style="display: grid; grid-template-rows: auto 1fr auto; gap: 10px; padding: 20px 22px; background: #1B2618; color: #FBFAF6; min-height: 150px;" style-hover="background: #22301F; color: #FBFAF6;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #A8B29C;">Doorlopende samenwerking</span><span style="display: flex; flex-direction: column; gap: 6px;"><span style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; line-height: 1.15;">Digital Fit Partnership</span><span style="font-size: 14px; color: #D5DEC6; line-height: 1.5; max-width: 34ch;">De drie samen, meerjarig. Klaar voor iedere volgende verandering.</span></span><span style="font-weight: 600; font-size: 14px; text-decoration: underline; text-decoration-color: #C9E265; text-decoration-thickness: 2px; text-underline-offset: 4px;">Ontdek Digital Fit →</span></a>
+          <a href="ai.dc.html" style="display: grid; grid-template-rows: auto 1fr auto; gap: 10px; padding: 20px 22px; background: #F1EFE7; color: #1B2618; border-left: 3px solid #C9E265; min-height: 150px;" style-hover="background: #E6E4DC; color: #1B2618;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5C6355;">Onderwerp · AI in de bouw</span><span style="display: flex; flex-direction: column; gap: 6px;"><span style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; line-height: 1.15; text-wrap: pretty;">Begin niet met AI, begin met wat je wilt bereiken</span><span style="font-size: 14px; color: #4A5246; line-height: 1.5; max-width: 34ch;">Data, technologie, proces, sectorkennis en de mens.</span></span><span style="font-weight: 600; font-size: 14px; text-decoration: underline; text-decoration-color: #C9E265; text-decoration-thickness: 2px; text-underline-offset: 4px;">Lees onze aanpak →</span></a>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px; background: #F1EFE7; padding: 24px; align-self: start;">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Waar staat jouw organisatie?</span>
+        <p style="margin: 0; font-family: 'Newsreader', serif; font-size: 20px; line-height: 1.25;">Tien vragen, twee minuten, direct een beeld van je digitale fitheid. Daarna weet je waarover je met ons wilt praten.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><a href="zelfscan.dc.html" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: #1B2618; color: #FBFAF6; font-weight: 600; font-size: 14px; min-height: 44px;" style-hover="background: #3F5741; color: #FBFAF6;"><span>Doe de zelfscan</span><span aria-hidden="true" style="color: #C9E265;">→</span></a><a href="tel:+31634274873" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 16px; border: 1px solid #1B2618; font-weight: 600; font-size: 14px; color: #1B2618; min-height: 44px;" style-hover="background: #1B2618; color: #FBFAF6;"><span>Liever direct sparren? Bel Melvin</span><span aria-hidden="true">→</span></a></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><img src="assets/team/melvin.jpg" alt="" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block;"><div><div style="font-weight: 600; font-size: 15px;">Melvin van Puffelen</div><div style="font-size: 13px; color: #6B7263;">Directeur · “Eén gesprek is meestal genoeg om te weten of we kunnen helpen.”</div></div></div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+<sc-if value="{{ opleidingenOpen }}" hint-placeholder-val="{{ false }}">
+  <div onMouseEnter="{{ blijf }}" style="position: absolute; left: 0; right: 0; top: 100%; background: #FBFAF6; border-bottom: 1px solid #E6E4DC; box-shadow: 0 24px 48px -24px rgba(27,38,24,0.25); animation: navIn 0.18s ease both;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 56px) 32px; display: grid; grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr); gap: 48px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px;">
+          <sc-for list="{{ categorieen }}" as="cat" hint-placeholder-count="6">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <a href="{{ cat.href }}" style="font-family: 'Newsreader', serif; font-size: 19px; font-weight: 500; color: #1B2618; padding-bottom: 8px; border-bottom: 1px solid #1B2618; margin-bottom: 4px;" style-hover="color: #3F5741;">{{ cat.naam }}</a>
+              <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="3">
+                <a href="{{ it.href }}" style="font-size: 14px; color: #2B3229; padding: 7px 0; min-height: 32px; display: flex; align-items: center;" style-hover="color: #3F5741;">{{ it.naam }}</a>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; border-top: 1px solid #E6E4DC; padding-top: 16px;">
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Zoek op vorm</span>
+          <a href="opleidingen.dc.html?vorm=Klassikaal" style="font-size: 14px; font-weight: 500; padding: 8px 0;" style-hover="color: #3F5741;">Klassikaal</a>
+          <a href="opleidingen.dc.html?vorm=Online" style="font-size: 14px; font-weight: 500; padding: 8px 0;" style-hover="color: #3F5741;">Online</a>
+          <a href="opleidingen.dc.html?vorm=Blended" style="font-size: 14px; font-weight: 500; padding: 8px 0;" style-hover="color: #3F5741;">Blended</a>
+          <a href="opleidingen.dc.html#agenda" style="font-size: 14px; font-weight: 500; padding: 8px 0;" style-hover="color: #3F5741;">Eerstvolgende startdata</a>
+          <a href="events.dc.html" style="font-size: 14px; font-weight: 500; padding: 8px 0;" style-hover="color: #3F5741;">Sessies en events</a>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-self: start;">
+        <div style="display: flex; flex-direction: column; background: #F1EFE7; padding: 20px 24px 8px;">
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263; padding-bottom: 12px; border-bottom: 1px solid #1B2618;">Eerstvolgende startdata</span>
+          <sc-for list="{{ komend }}" as="k" hint-placeholder-count="3">
+            <a href="{{ k.href }}" style="display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 4px 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #E6E4DC; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741;"><span style="font-family: 'Newsreader', serif; font-size: 16px; font-style: italic; color: #4A5246;">{{ k.datum }}</span><span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 600; font-size: 14px; line-height: 1.3;">{{ k.naam }}</span><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: {{ k.plekKleur }};">{{ k.plekDot }}{{ k.plek }}</span></span></a>
+          </sc-for>
+        </div>
+        <a href="opleidingen.dc.html" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: #1B2618; color: #FBFAF6; font-weight: 600; font-size: 14px; min-height: 44px;" style-hover="background: #3F5741; color: #FBFAF6;"><span>Alle opleidingen en data</span><span aria-hidden="true" style="color: #C9E265;">→</span></a>
+        <div style="display: flex; align-items: center; gap: 12px; padding: 4px 0;"><img src="assets/opt/team-herwin.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: block;"><span style="font-size: 13px; line-height: 1.45; color: #4A5246;"><strong style="color: #1B2618; font-weight: 600;">Twijfel over niveau of vorm?</strong> Bel Herwin, trainer: <a href="tel:+31548376797" style="font-weight: 600; color: #1B2618; text-decoration: underline; text-decoration-color: #C9E265; text-decoration-thickness: 2px; text-underline-offset: 3px;">0548 37 67 97</a></span></div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+<sc-if value="{{ incompanyOpen }}" hint-placeholder-val="{{ false }}">
+  <div onMouseEnter="{{ blijf }}" style="position: absolute; left: 0; right: 0; top: 100%; background: #FBFAF6; border-bottom: 1px solid #E6E4DC; box-shadow: 0 24px 48px -24px rgba(27,38,24,0.25); animation: navIn 0.18s ease both;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 28px clamp(20px, 4vw, 56px) 32px; display: grid; grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr); gap: 48px; align-items: start;">
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 48px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Hoe kunnen wij je helpen?</span>
+          <div style="display: flex; flex-direction: column;"><a href="incompany.dc.html#vormen" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Incompany trainingen</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="opleidingen.dc.html?cat=Functie" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Leerpaden per functie</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="incompany.dc.html#functie-voorbeeld" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Skills assessment en ontwikkelplan</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="capability.dc.html" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>L&amp;D-advies en begeleiding</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="incompany.dc.html#vormen" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Coaching op de werkvloer</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="voor-organisaties.dc.html" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Interne academy (Digital Fit)</span><span aria-hidden="true" style="color: #6B7263;">→</span></a></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Partner in ontwikkeling</span>
+          <div style="display: flex; flex-direction: column;"><a href="incompany.dc.html#aanpak" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Zo pakken we het aan</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="incompany.dc.html#team" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Met wie je te maken krijgt</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="referenties.dc.html" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Een greep uit onze klanten</span><span aria-hidden="true" style="color: #6B7263;">→</span></a><a href="incompany.dc.html#faq" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E6E4DC; font-size: 15px; color: #1B2618; min-height: 44px;" style-hover="color: #3F5741; padding-left: 4px;"><span>Veelgestelde vragen</span><span aria-hidden="true" style="color: #6B7263;">→</span></a></div>
+          <a href="incompany.dc.html" style="font-weight: 600; font-size: 14px; margin-top: 12px; text-decoration: underline; text-decoration-color: #C9E265; text-decoration-thickness: 2px; text-underline-offset: 4px;">Alles over incompany en teams →</a>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px; background: #F1EFE7; padding: 24px; align-self: start;">
+        <div style="display: flex; align-items: center; gap: 12px;"><img src="assets/team/melvin.jpg" alt="" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block;"><div><div style="font-weight: 600; font-size: 15px;">Melvin van Puffelen</div><div style="font-size: 13px; color: #6B7263;">Directeur BIM4ALL Academie</div></div></div>
+        <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4A5246;">Stuur je vraag of teamsamenstelling. In een half uur weten we of één training volstaat of dat een leerpad logischer is. Reactie dezelfde werkdag.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><a href="https://wa.me/31634274873" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: #1B2618; color: #FBFAF6; font-weight: 600; font-size: 14px; min-height: 44px;" style-hover="background: #3F5741; color: #FBFAF6;"><span>WhatsApp met Melvin</span><span aria-hidden="true" style="color: #C9E265;">→</span></a><a href="contact.dc.html" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 16px; border: 1px solid #1B2618; font-weight: 600; font-size: 14px; color: #1B2618; min-height: 44px;" style-hover="background: #1B2618; color: #FBFAF6;"><span>Plan een gesprek</span><span aria-hidden="true">→</span></a></div>
+        <a href="incompany.dc.html#faq" style="font-size: 13px; color: #5C6355;" style-hover="color: #1B2618;">Eerst de <span style="text-decoration: underline; text-underline-offset: 3px;">veelgestelde vragen</span> over incompany.</a>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position: absolute; left: 0; right: 0; top: 100%; background: #FBFAF6; border-bottom: 1px solid #E6E4DC; padding: 12px clamp(20px, 4vw, 56px) 28px; display: flex; flex-direction: column; font-size: 18px; font-weight: 500; animation: navIn 0.18s ease both;">
+    <a href="strategy.dc.html" style="padding: 14px 0; border-bottom: 1px solid #E6E4DC; display: flex; justify-content: space-between; gap: 12px;">Oplossingen <span style="color: #6B7263; font-size: 13px; font-weight: 400; text-align: right;">Strategy · Transformation · Capability · Partnership</span></a>
+    <button type="button" onClick="{{ toggleMobielOpl }}" aria-expanded="{{ mobielOplOpen }}" style="cursor: pointer; background: none; border: none; border-bottom: 1px solid #E6E4DC; padding: 14px 0; font: inherit; color: #1B2618; text-align: left; display: flex; justify-content: space-between; align-items: center;">Opleidingen <span aria-hidden="true" style="font-size: 14px; color: #6B7263;">{{ mobielOplTeken }}</span></button>
+    <sc-if value="{{ mobielOplOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; padding: 6px 0 10px 16px; border-bottom: 1px solid #E6E4DC; font-size: 16px; font-weight: 400;">
+        <sc-for list="{{ categorieen }}" as="cat" hint-placeholder-count="6"><a href="{{ cat.href }}" style="padding: 10px 0; color: #1B2618;">{{ cat.naam }}</a></sc-for>
+        <a href="opleidingen.dc.html" style="padding: 10px 0; font-weight: 600;">Alle opleidingen →</a>
+      </div>
+    </sc-if>
+    <a href="incompany.dc.html" style="padding: 14px 0; border-bottom: 1px solid #E6E4DC; display: flex; justify-content: space-between; gap: 12px;">Incompany <span style="color: #6B7263; font-size: 13px; font-weight: 400; text-align: right;">Trainingen · Leerpaden · L&amp;D-advies</span></a>
+    <a href="events.dc.html" style="padding: 14px 0; border-bottom: 1px solid #E6E4DC;">Events</a>
+    <a href="referenties.dc.html" style="padding: 14px 0; border-bottom: 1px solid #E6E4DC;">Referenties</a>
+    <a href="inspiratie.dc.html" style="padding: 14px 0; border-bottom: 1px solid #E6E4DC;">Inspiratie</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 16px 0 4px; font-size: 15px; font-weight: 500; color: #4A5246;"><a href="over-ons.dc.html">Over ons</a><a href="werken-bij.dc.html">Werken bij</a><a href="contact.dc.html">Contact</a></div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 16px;">
+      <a href="zelfscan.dc.html" style="font-size: 15px; font-weight: 600; padding: 12px 20px; border: 1px solid #1B2618; border-radius: 999px;">Doe de zelfscan</a>
+      <a href="tel:+31548376797" style="font-size: 15px; font-weight: 600; color: #FBFAF6; background: #1B2618; padding: 13px 20px; border-radius: 999px;">Bel 0548 37 67 97</a>
+    </div>
+  </div>
+  </sc-if>
+</header>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: null, menuOpen: false, desktop: true, mobielOpl: false, scrolled: false };
+  componentDidMount() {
+    this.onScroll = () => { const s = window.scrollY > 40; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true }); this.onScroll();
+    this.mq = window.matchMedia('(min-width: 1140px)');
+    this.onMq = () => this.setState({ desktop: this.mq.matches, open: null, menuOpen: false });
+    this.onMq(); this.mq.addEventListener('change', this.onMq);
+    this.onKey = (e) => { if (e.key === 'Escape') this.setState({ open: null, menuOpen: false }); };
+    window.addEventListener('keydown', this.onKey);
+    if (!window.B4A_OPLEIDINGEN) { const sc = document.createElement('script'); sc.src = 'opleidingen-data.js'; sc.onload = () => this.forceUpdate(); document.head.appendChild(sc); }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); this.mq?.removeEventListener('change', this.onMq); window.removeEventListener('keydown', this.onKey); clearTimeout(this._t); clearTimeout(this._o); }
+  renderVals() {
+    const open = (k) => () => { clearTimeout(this._t); clearTimeout(this._o); this._o = setTimeout(() => this.setState({ open: k }), this.state.open ? 0 : 150); };
+    const toggle = (k) => () => { clearTimeout(this._t); clearTimeout(this._o); this.setState((s) => ({ open: s.open === k ? null : k })); };
+    const o = 'opleidingen.dc.html?cat=', d = 'opleiding.dc.html?o=';
+    const categorieen = [
+      { naam: 'AI & digitalisering', href: o + 'AI', items: [{ naam: 'AI in de bouwpraktijk', href: d + 'ai-bouwpraktijk' }, { naam: 'AI voor management en directie', href: d + 'ai-management' }, { naam: 'Slimmer werken met Copilot', href: d + 'copilot' }, { naam: 'AI-beleid en verantwoord gebruik', href: d + 'ai-beleid' }] },
+      { naam: 'BIM & software', href: o + 'BIM', items: [{ naam: 'Revit Architecture basis', href: d + 'revit-arch' }, { naam: 'Revit MEP voor installateurs', href: d + 'revit-mep' }, { naam: 'Solibri modelcontrole', href: d + 'solibri' }, { naam: 'Autodesk Construction Cloud', href: d + 'acc' }] },
+      { naam: 'Data & informatie', href: o + 'Data', items: [{ naam: 'BIM-coördinator', href: d + 'bim-coordinator' }, { naam: 'Informatiemanagement en ILS', href: d + 'ils' }, { naam: 'Data-analyse met Power BI', href: d + 'powerbi' }] },
+      { naam: 'Mens & samenwerking', href: o + 'Mens', items: [{ naam: 'Communiceren in projecten', href: d + 'communiceren' }, { naam: 'Feedback en eigenaarschap', href: d + 'feedback' }, { naam: 'Samenwerken in de digitale keten', href: d + 'keten' }] },
+      { naam: 'Leiderschap & verandering', href: o + 'Leiderschap', items: [{ naam: 'Leidinggeven aan digitale verandering', href: d + 'leidinggeven' }, { naam: 'Adoptie van nieuwe werkwijzen', href: d + 'adoptie' }, { naam: 'Coachend leiderschap', href: d + 'coachend' }] },
+      { naam: 'Functiegericht', href: o + 'Functie', items: [{ naam: 'Werkvoorbereider 2.0', href: d + 'werkvoorbereider' }, { naam: 'BIM-modelleur', href: d + 'modelleur' }, { naam: 'Projectleider in een digitale organisatie', href: d + 'projectleider' }] },
+    ];
+    const M = { januari: 0, februari: 1, maart: 2, april: 3, mei: 4, juni: 5, juli: 6, augustus: 7, september: 8, oktober: 9, november: 10, december: 11 };
+    const parse = (s) => { const [dd, mm, yy] = s.split(' '); return new Date(+yy, M[mm] ?? 0, +dd).getTime(); };
+    const nu = Date.now() - 86400000;
+    const komend = (window.B4A_OPLEIDINGEN || []).flatMap((op) => (op.starts || op.data || []).map((st) => { const dat = typeof st === 'string' ? st : (st.start || st.datum); const pl = typeof st === 'string' ? null : st.plekken; return { op, dat, pl, t: parse(dat) }; })).filter((x) => x.t >= nu).sort((a, b) => a.t - b.t).slice(0, 3)
+      .map(({ op, dat, pl }) => { const weinig = typeof pl === 'number' && pl <= 4; return { href: 'opleiding.dc.html?o=' + op.id, datum: dat.replace(/ \d{4}$/, '').replace(/(\w{3})\w+$/, '$1'), naam: op.naam, plek: weinig ? (pl === 1 ? 'Nog 1 plek' : 'Nog ' + pl + ' plekken') : 'Plek beschikbaar', plekKleur: weinig ? '#1B2618' : '#6B7263', plekDot: React.createElement('span', { 'aria-hidden': true, style: { width: 7, height: 7, borderRadius: '50%', display: 'inline-block', background: weinig ? '#C9E265' : '#D9D5C8', animation: weinig ? 'waPuls 2s ease-out infinite' : 'none' } }) }; });
+    const waDot = React.createElement('span', { 'aria-hidden': true, className: 'wa-puls', style: { width: 8, height: 8, borderRadius: '50%', background: '#C9E265', display: 'inline-block', animation: 'waPuls 2s ease-out infinite' } });
+    const f = (location.pathname.split('/').pop() || '').replace(/%20/g, ' ');
+    const fSlug = f.replace(/\.html$/, '').replace(/-/g, ' ') + (/ v4/.test(f) ? '' : ' v4');
+    const lime = (re) => (re.test(f) || new RegExp(re.source, 'i').test(fSlug)) ? '#C9E265' : 'transparent';
+    const actief = { ai: lime(/^AI v4/), oplossingen: lime(/^(Strategy|Transformation|Capability|Voor organisaties) v4/), opleidingen: lime(/^(Opleidingen|Opleiding) v4/), events: lime(/^Events v4/), incompany: lime(/^Incompany v4/), referenties: lime(/^(Referenties|Klantverhaal)/), inspiratie: lime(/^(Inspiratie|Artikel) v4/) };
+    return { waDot, actief, topbarHoogte: this.state.scrolled ? '0px' : '38px',
+      desktop: this.state.desktop, mobiel: !this.state.desktop,
+      menuOpen: this.state.menuOpen, menuLabel: this.state.menuOpen ? 'Sluiten' : 'Menu',
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      mobielOplOpen: this.state.mobielOpl, mobielOplTeken: this.state.mobielOpl ? '−' : '+', toggleMobielOpl: () => this.setState((s) => ({ mobielOpl: !s.mobielOpl })),
+      oplossingenOpen: this.state.open === 'oplossingen', opleidingenOpen: this.state.open === 'opleidingen', incompanyOpen: this.state.open === 'incompany',
+      openOplossingen: open('oplossingen'), openOpleidingen: open('opleidingen'), openIncompany: open('incompany'),
+      toggleOplossingen: toggle('oplossingen'), toggleOpleidingen: toggle('opleidingen'), toggleIncompany: toggle('incompany'),
+      blijf: () => { clearTimeout(this._t); clearTimeout(this._o); },
+      sluit: () => { clearTimeout(this._t); clearTimeout(this._o); this.setState({ open: null }); },
+      sluitLater: () => { clearTimeout(this._t); clearTimeout(this._o); this._t = setTimeout(() => this.setState({ open: null }), 220); },
+      focusWeg: (e) => { const h = e.currentTarget; setTimeout(() => { if (!h.contains(document.activeElement)) this.setState({ open: null }); }, 0); },
+      categorieen, komend,
+    };
+  }
+}
+</script>
+</body>
+</html>

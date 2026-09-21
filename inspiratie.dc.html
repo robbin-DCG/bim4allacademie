@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#1B2618"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="200" fill="#C9E265">B4A</text></svg></template>
+<meta name="ext-resource-dependency" content="assets/opt/brummelhuis-revit.jpg">
+<meta name="ext-resource-dependency" content="assets/hollander-gesprek.jpeg">
+<meta name="ext-resource-dependency" content="assets/opt/foto-leertrajecten.jpg">
+<meta name="ext-resource-dependency" content="assets/vastbouw-overleg.jpeg">
+<meta name="ext-resource-dependency" content="assets/roc-overleg.jpeg">
+<meta name="ext-resource-dependency" content="assets/foto-training-overleg.jpeg">
+<meta name="ext-resource-dependency" content="logo.png">
+<meta name="ext-resource-dependency" content="assets/team/melvin.jpg">
+<meta name="ext-resource-dependency" content="assets/opt/team-herwin.jpg">
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Inspiratie | BIM4ALL Academie</title>
+<meta property="og:title" content="Inspiratie | BIM4ALL Academie"><meta property="og:description" content="Artikelen over AI, BIM, digitaal werken en de ontwikkeling van mensen in bouw en installatie. Geschreven vanuit projecten en trainingen, voor directie, HR en digital leads."><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><meta name="theme-color" content="#1B2618">
+<meta name="description" content="Artikelen over AI, BIM, digitaal werken en de ontwikkeling van mensen in bouw en installatie. Geschreven vanuit projecten en trainingen, voor directie, HR en digital leads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="opleidingen-data.js"></script>
+<style>
+  .b4a-skip { position: absolute; left: 16px; top: -60px; z-index: 200; background: #1B2618; color: #FBFAF6; padding: 12px 18px; font-weight: 600; font-size: 15px; transition: top 0.15s; }
+  .b4a-skip:focus { top: 12px; outline: 2px solid #C9E265; }
+  html { scroll-padding-top: 90px; }
+  img { max-width: 100%; }
+  @media (max-width: 720px) { html { scroll-padding-top: 76px; } }
+  body { margin: 0; font-family: 'Figtree', sans-serif; color: #1B2618; background: #FBFAF6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #3F5741; }
+  :focus-visible { outline: 2px solid #1B2618; outline-offset: 3px; }
+  /* Animaties: rustige scroll-reveal per sectie, hero-inloop, kerngetallen */
+  @keyframes b4aHeroIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  [data-screen-label] > main > section:first-of-type > div > *, [data-screen-label] > section:first-of-type > div > * { animation: b4aHeroIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(2) { animation-delay: 0.12s; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(3) { animation-delay: 0.24s; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(4) { animation-delay: 0.36s; }
+  .b4a-reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .b4a-reveal.b4a-in { opacity: 1; transform: none; }
+  .b4a-stagger > * { opacity: 0; transform: translateY(14px); transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .b4a-stagger.b4a-in > * { opacity: 1; transform: none; }
+  .b4a-stagger.b4a-in > *:nth-child(2) { transition-delay: 0.08s; } .b4a-stagger.b4a-in > *:nth-child(3) { transition-delay: 0.16s; } .b4a-stagger.b4a-in > *:nth-child(4) { transition-delay: 0.24s; } .b4a-stagger.b4a-in > *:nth-child(5) { transition-delay: 0.32s; } .b4a-stagger.b4a-in > *:nth-child(6) { transition-delay: 0.4s; }
+  [data-screen-label] img { transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  [data-screen-label] a:hover > img { transform: scale(1.02); }
+  @media (prefers-reduced-motion: reduce) { .b4a-reveal, .b4a-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; } [data-screen-label] > main > section:first-of-type > div > *, [data-screen-label] > section:first-of-type > div > * { animation: none !important; } }
+</style>
+<script src="b4a-motion.js"></script>
+</helmet>
+<div data-screen-label="Inspiratie v4" style="overflow-x: clip; overflow-y: visible;">
+  <a href="#inhoud" class="b4a-skip">Naar de inhoud</a>
+  <dc-import name="nav" style="position: sticky; top: 0; z-index: 100; display: block;" hint-size="100%,76px"></dc-import>
+  <main id="inhoud">
+  <section style="border-bottom: 1px solid #E6E4DC;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(40px, 5vw, 72px) clamp(20px, 4vw, 56px) clamp(28px, 3vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px 64px; align-items: end;">
+      <h1 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(38px, 4.6vw, 64px); font-weight: 500; line-height: 1.02; text-wrap: pretty;">Kijk mee in ons denken</h1>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5246; max-width: 52ch;">Wat wij zien in projecten en trainingen, opgeschreven voor directie, HR en digital leads in bouw en installatie. Geen nieuwsbriefmuur, wel een naam en datum bij elk stuk.</p>
+    </div>
+  </section>
+  <section style="border-bottom: 1px solid #E6E4DC; background: #FBFAF6; position: sticky; top: 76px; z-index: 50;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 14px clamp(20px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: 6px;">
+      <sc-for list="{{ themas }}" as="t" hint-placeholder-count="6"><button type="button" onClick="{{ t.kies }}" aria-pressed="{{ t.actief }}" style="cursor: pointer; font: inherit; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid {{ t.rand }}; background: {{ t.bg }}; color: {{ t.kleur }};">{{ t.label }}</button></sc-for>
+    </div>
+  </section>
+  <section>
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(32px, 4vw, 56px) clamp(20px, 4vw, 56px) clamp(56px, 7vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 40px 32px;">
+      <sc-for list="{{ lijst }}" as="a" hint-placeholder-count="6">
+        <a href="{{ a.href }}" style="display: flex; flex-direction: column; gap: 12px; color: #1B2618;" style-hover="color: #3F5741;">
+          <img src="{{ a.foto }}" alt="" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block;" fetchPriority="high">
+          <span style="font-size: 13px; color: #6B7263;">{{ a.thema }} · {{ a.datum }} · {{ a.leestijd }}</span>
+          <span style="font-family: 'Newsreader', serif; font-size: clamp(22px, 1.9vw, 27px); font-weight: 500; line-height: 1.2;">{{ a.titel }}</span>
+          <span style="font-size: 15px; line-height: 1.55; color: #4A5246;">{{ a.intro }}</span>
+          <span style="font-size: 13px; color: #6B7263;">Door {{ a.auteur }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+  </main>
+  <dc-import name="footer" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { thema: 'alle' };
+  componentDidMount() { const t = new URLSearchParams(location.search).get('thema'); if (t) this.setState({ thema: t }); if (!window.B4A_ARTIKELEN) this._poll = setInterval(() => { if (window.B4A_ARTIKELEN) { clearInterval(this._poll); this.forceUpdate(); } }, 60); }
+  componentWillUnmount() { clearInterval(this._poll); }
+  renderVals() {
+    const alle = window.B4A_ARTIKELEN || [];
+    const namen = ['alle', ...new Set(alle.map((a) => a.thema))];
+    const themas = namen.map((k) => { const a = this.state.thema === k; return { label: k === 'alle' ? 'Alles' : k, actief: a, kies: () => this.setState({ thema: k }), bg: a ? '#1B2618' : 'transparent', kleur: a ? '#FBFAF6' : '#1B2618', rand: a ? '#1B2618' : '#D9D5C8' }; });
+    const lijst = alle.filter((a) => this.state.thema === 'alle' || a.thema === this.state.thema).map((a) => ({ ...a, href: 'artikel.dc.html?a=' + a.id }));
+    return { themas, lijst };
+  }
+}
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 Statische site, geen build. Zet deze map als root op GitHub Pages of Netlify.
 
-- `index.html` stuurt door naar `Homepage v4.dc.html`.
+- `index.html` stuurt door naar `homepage.dc.html`.
 - Pagina's: `*.dc.html`. Bestandsnamen met spaties zijn bewust; menu en interne links verwijzen ernaar.
 - `assets/`: alle foto's en logo's, één keer.
 - `support.js`, `b4a-motion.js`, `opleidingen-data.js`: runtime, animaties en data. React wordt geladen via unpkg.com.
@@ -17,3 +17,8 @@ Nog te koppelen door BIM4ALL: formulieren, KvK/btw in footer, Google-beoordeling
 - Foto's > 400 KB verkleind naar max 1600 px JPEG in `assets/opt/` (20 MB → ~10 MB).
 - `robots.txt`, `sitemap.xml` (domein aanpassen: nu www.bim4all-academie.nl) en `404.html`.
 - Geen formulieren of servercode: geen injectie-aanvalsvlak. Formulieren later via extern platform, met CSP-uitbreiding voor dat domein.
+
+
+## Netlify (21 sep 2026)
+- Bestandsnamen zonder spaties; schone URL's via `_redirects` (/transformation → transformation.dc.html). `netlify.toml` schakelt asset-processing uit (dat breekt anders de runtime).
+- Zet in Netlify onder Site settings → Build & deploy → Post processing ook "Pretty URLs" uit als die aan staat.

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#1B2618"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="200" fill="#C9E265">B4A</text></svg></template>
+<meta name="ext-resource-dependency" content="logo.png">
+<meta name="ext-resource-dependency" content="assets/team/melvin.jpg">
+<meta name="ext-resource-dependency" content="assets/opt/team-herwin.jpg">
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Sessies en events | BIM4ALL Academie</title>
+<meta name="description" content="Kennisontbijten, webinars en één event per jaar van BIM4ALL Academie, online en in Rijssen. Kleine groepen, echte casussen.">
+<meta property="og:title" content="Events en kennissessies | BIM4ALL Academie"><meta property="og:description" content="Kennisontbijten, webinars en één event per jaar van BIM4ALL Academie, online en in Rijssen. Kleine groepen, echte casussen."><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><meta name="theme-color" content="#1B2618">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="opleidingen-data.js"></script>
+<style>
+  .b4a-skip { position: absolute; left: 16px; top: -60px; z-index: 200; background: #1B2618; color: #FBFAF6; padding: 12px 18px; font-weight: 600; font-size: 15px; transition: top 0.15s; }
+  .b4a-skip:focus { top: 12px; outline: 2px solid #C9E265; }
+  html { scroll-padding-top: 90px; }
+  img { max-width: 100%; }
+  @media (max-width: 720px) { html { scroll-padding-top: 76px; } }
+  body { margin: 0; font-family: 'Figtree', sans-serif; color: #1B2618; background: #FBFAF6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #3F5741; }
+  :focus-visible { outline: 2px solid #1B2618; outline-offset: 3px; }
+  input, textarea, select, button { font: inherit; }
+  @keyframes plekPuls { 0% { box-shadow: 0 0 0 0 rgba(201,226,101,0.8); } 70% { box-shadow: 0 0 0 7px rgba(201,226,101,0); } 100% { box-shadow: 0 0 0 0 rgba(201,226,101,0); } }
+  /* Animaties: rustige scroll-reveal per sectie, hero-inloop, kerngetallen */
+  @keyframes b4aHeroIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  [data-screen-label] > main > section:first-of-type > div > *, [data-screen-label] > section:first-of-type > div > * { animation: b4aHeroIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(2) { animation-delay: 0.12s; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(3) { animation-delay: 0.24s; }
+  [data-screen-label] > main > section:first-of-type > div > *:nth-child(4) { animation-delay: 0.36s; }
+  .b4a-reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .b4a-reveal.b4a-in { opacity: 1; transform: none; }
+  .b4a-stagger > * { opacity: 0; transform: translateY(14px); transition: opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .b4a-stagger.b4a-in > * { opacity: 1; transform: none; }
+  .b4a-stagger.b4a-in > *:nth-child(2) { transition-delay: 0.08s; } .b4a-stagger.b4a-in > *:nth-child(3) { transition-delay: 0.16s; } .b4a-stagger.b4a-in > *:nth-child(4) { transition-delay: 0.24s; } .b4a-stagger.b4a-in > *:nth-child(5) { transition-delay: 0.32s; } .b4a-stagger.b4a-in > *:nth-child(6) { transition-delay: 0.4s; }
+  [data-screen-label] img { transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  [data-screen-label] a:hover > img { transform: scale(1.02); }
+  @media (prefers-reduced-motion: reduce) { .b4a-reveal, .b4a-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; } [data-screen-label] > main > section:first-of-type > div > *, [data-screen-label] > section:first-of-type > div > * { animation: none !important; } }
+</style>
+<script src="b4a-motion.js"></script>
+</helmet>
+<div data-screen-label="Events v4" style="overflow-x: clip; overflow-y: visible;">
+  <a href="#inhoud" class="b4a-skip">Naar de inhoud</a>
+  <dc-import name="nav" style="position: sticky; top: 0; z-index: 100; display: block;" hint-size="100%,76px"></dc-import>
+  <main id="inhoud">
+<section style="border-bottom: 1px solid #E6E4DC;"><div style="max-width: 1360px; margin: 0 auto; padding: clamp(40px, 5vw, 72px) clamp(20px, 4vw, 56px) clamp(28px, 3vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px 64px; align-items: end;"><h1 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(38px, 4.6vw, 64px); font-weight: 500; line-height: 1.02; text-wrap: pretty;">Sessies en events</h1><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5246; max-width: 52ch;">Online sessies, ontbijtsessies en één event per jaar over wat er in de bouw verandert. Kleine groepen, echte casussen, geen verkooppraatje. Sessies zitten meestal binnen een paar weken vol. Voor <a href="voor-organisaties.dc.html" style="text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Digital Fit-partners</a> horen ze bij de samenwerking.</p></div></section>
+  <section><div style="max-width: 1360px; margin: 0 auto; padding: clamp(32px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(56px, 7vw, 96px); display: flex; flex-direction: column;"><div role="group" aria-label="Soort sessie" style="display: flex; flex-wrap: wrap; gap: 6px; padding-bottom: 24px;"><sc-for list="{{ filters }}" as="f" hint-placeholder-count="3"><button type="button" onClick="{{ f.kies }}" aria-pressed="{{ f.actief }}" style="cursor: pointer; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid {{ f.rand }}; background: {{ f.bg }}; color: {{ f.kleur }};">{{ f.label }}</button></sc-for></div><sc-for list="{{ events }}" as="e" hint-placeholder-count="4"><article id="{{ e.id }}" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px 48px; padding: 32px 0; border-top: 1px solid #E6E4DC;"><div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-family: 'Newsreader', serif; font-size: 26px; font-style: italic;">{{ e.datum }}</span><span style="font-size: 14px; color: #6B7263;">{{ e.tijd }} · {{ e.vorm }}</span><span style="font-size: 13px; color: #6B7263;">{{ e.soort }}</span><span style="font-size: 13px; font-weight: 600; color: {{ e.toegangKleur }};">{{ e.toegang }}</span></div><div style="display: flex; flex-direction: column; gap: 10px;"><h2 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(24px, 2vw, 30px); font-weight: 500; line-height: 1.15;">{{ e.titel }}</h2><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A5246;">{{ e.tekst }}</p><span style="font-size: 14px; color: #6B7263;">Voor {{ e.voor }} · {{ e.prijs }}</span></div><div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;"><sc-if value="{{ e.open }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ e.meld }}" style="cursor: pointer; font-size: 15px; font-weight: 600; color: #FBFAF6; background: #1B2618; border: none; padding: 13px 22px; border-radius: 999px;" style-hover="background: #3F5741;">Meld je aan</button><span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: {{ e.plekKleur }};">{{ e.plekDot }}{{ e.plekTekst }}</span></sc-if><sc-if value="{{ e.gemeld }}" hint-placeholder-val="{{ false }}"><span style="font-size: 15px; font-weight: 600;">Genoteerd. Je krijgt vandaag een bevestiging per mail.</span></sc-if></div></article></sc-for><div style="border-top: 1px solid #E6E4DC;"></div></div></section>
+  <section style="background: #1B2618; color: #FBFAF6;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 32px 80px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 16px;"><h2 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(32px, 3.4vw, 48px); font-weight: 500; line-height: 1.08; text-wrap: pretty;">Liever niet één keer, maar het hele jaar door?</h2><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #D5DEC6; max-width: 52ch;">In het Digital Fit Partnership kijken we elk kwartaal met je mee: van strategie tot werkvloer. De sessies en events horen daar vanzelf bij.</p><div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;"><a href="voor-organisaties.dc.html" style="font-size: 15px; font-weight: 600; color: #1B2618; background: #C9E265; padding: 13px 22px; border-radius: 999px;" style-hover="background: #D8EC85;">Bekijk het partnership</a><a href="tel:+31634274873" style="font-size: 15px; font-weight: 600; color: #FBFAF6; border: 1px solid rgba(251,250,246,0.4); padding: 12px 22px; border-radius: 999px;" style-hover="border-color: #FBFAF6;">Bel Melvin</a></div></div>
+      
+    </div>
+  </section>
+  <section style="border-top: 1px solid #E6E4DC;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 40px 80px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 20px;"><h2 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(34px, 3.8vw, 56px); font-weight: 500; line-height: 1.05; text-wrap: pretty;">Wat betekent dit voor jouw organisatie?</h2><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5246; max-width: 52ch;">Een vraag over AI, digitalisering of de ontwikkeling van je mensen? Bel, mail of WhatsApp. Je krijgt gewoon iemand uit het team die de inhoud kent, op werkdagen binnen een uur.</p><div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px;"><a href="tel:+31634274873" style="font-size: 15px; font-weight: 600; color: #FBFAF6; background: #CC2E8B; padding: 13px 22px; border-radius: 999px;" style-hover="background: #B32478;">Bel 06 342 748 73</a><a href="https://wa.me/31634274873" style="font-size: 15px; font-weight: 600; color: #1B2618; border: 1px solid #1B2618; padding: 12px 22px; border-radius: 999px;" style-hover="background: #1B2618; color: #FBFAF6;">WhatsApp</a><a href="contact.dc.html" style="font-size: 15px; font-weight: 600; color: #1B2618; padding: 12px 4px; text-decoration: underline; text-decoration-color: #C9E265; text-decoration-thickness: 2px; text-underline-offset: 5px;">Plan een gesprek</a></div><span style="font-size: 13px; color: #6B7263; margin-top: -8px;">Op werkdagen reageren we dezelfde dag. Liever eerst zelf kijken? <a href="zelfscan.dc.html" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Doe de zelfscan</a>.</span></div>
+      <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: center; max-width: 480px;"><img src="assets/team/melvin.jpg" alt="Melvin van Puffelen" style="width: 120px; height: 120px; object-fit: cover; display: block;" fetchPriority="high"><div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-weight: 600; font-size: 17px;">Melvin van Puffelen</span><span style="font-size: 14px; color: #6B7263;">Directeur BIM4ALL Academie</span><span style="font-size: 15px; color: #4A5246; margin-top: 8px; line-height: 1.5;">“Meestal is één gesprek genoeg om te weten of, en hoe, we kunnen helpen.”</span></div></div>
+    </div>
+  </section>
+  </main>
+  <dc-import name="footer" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script data-dc-script type="text/plain">class Component extends DCLogic {
+  state = { gemeld: {}, filter: 'alle' };
+  componentDidMount() { if (!window.B4A_EVENTS) this._poll = setInterval(() => { if (window.B4A_EVENTS) { clearInterval(this._poll); this.forceUpdate(); this.schema(); } }, 60); else this.schema(); }
+  componentWillUnmount() { clearInterval(this._poll); this._ld?.remove(); }
+  schema() { const ev = window.B4A_EVENTS || []; if (!ev.length || this._ld) return; this._ld = document.createElement('script'); this._ld.type = 'application/ld+json'; this._ld.textContent = JSON.stringify(ev.map((e) => ({ '@context': 'https://schema.org', '@type': 'Event', name: e.titel, description: e.tekst, startDate: e.datum, eventAttendanceMode: e.locatie === 'Online' ? 'https://schema.org/OnlineEventAttendanceMode' : 'https://schema.org/OfflineEventAttendanceMode', location: e.locatie === 'Online' ? { '@type': 'VirtualLocation', url: 'https://www.bim4all-academie.nl/events' } : { '@type': 'Place', name: 'BIM4ALL Academie', address: 'Nijverdalseweg 133, 7461 AG Rijssen' }, organizer: { '@type': 'Organization', name: 'BIM4ALL Academie' }, isAccessibleForFree: false }))); document.head.appendChild(this._ld); }
+  renderVals() {
+    const filters = [['alle', 'Alles'], ['online', 'Online'], ['fysiek', 'In Rijssen'], ['besloten', 'Alleen partners']].map(([k, label]) => { const a = this.state.filter === k; return { label, actief: a, kies: () => this.setState({ filter: k }), bg: a ? '#1B2618' : 'transparent', kleur: a ? '#FBFAF6' : '#1B2618', rand: a ? '#1B2618' : '#D9D5C8' }; });
+    const soort = (e) => (e.soort || '').startsWith('Besloten') ? 'besloten' : (e.locatie === 'Online' ? 'online' : 'fysiek');
+    return { filters, events: (window.B4A_EVENTS || []).filter((e) => this.state.filter === 'alle' || soort(e) === this.state.filter).slice(0, 8).map((e) => ({ ...e, open: !this.state.gemeld[e.id], gemeld: !!this.state.gemeld[e.id], meld: () => this.setState((s) => ({ gemeld: { ...s.gemeld, [e.id]: true } })), plekTekst: (typeof e.plekken === 'number' && e.plekken <= 6) ? (e.plekken <= 0 ? 'Vol, wachtlijst' : e.plekken === 1 ? 'Nog 1 plek' : 'Nog ' + e.plekken + ' plekken') : 'Plek beschikbaar', plekKleur: (typeof e.plekken === 'number' && e.plekken <= 6) ? '#1B2618' : '#6B7263', plekDot: React.createElement('span', { 'aria-hidden': true, style: { width: 8, height: 8, borderRadius: '50%', display: 'inline-block', background: (typeof e.plekken === 'number' && e.plekken <= 6) ? '#C9E265' : '#D9D5C8', animation: (typeof e.plekken === 'number' && e.plekken > 0 && e.plekken <= 6) ? 'plekPuls 1.8s ease-out infinite' : 'none' } }), toegang: (e.soort || '').startsWith('Besloten') ? 'Voor Digital Fit-deelnemers' : 'Open inschrijving', toegangKleur: (e.soort || '').startsWith('Besloten') ? '#1B2618' : '#5C6355' })) };
+  }
+}</script>
+</body>
+</html>

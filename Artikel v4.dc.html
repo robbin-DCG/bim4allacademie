@@ -3,15 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <script src="./support.js"></script>
 <template id="__bundler_thumbnail" data-bg-color="#1B2618"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="200" fill="#C9E265">B4A</text></svg></template>
-<meta name="ext-resource-dependency" content="assets/brummelhuis-revit.jpeg">
+<meta name="ext-resource-dependency" content="assets/opt/brummelhuis-revit.jpg">
 <meta name="ext-resource-dependency" content="assets/hollander-gesprek.jpeg">
-<meta name="ext-resource-dependency" content="assets/foto-leertrajecten.jpeg">
+<meta name="ext-resource-dependency" content="assets/opt/foto-leertrajecten.jpg">
 <meta name="ext-resource-dependency" content="assets/vastbouw-overleg.jpeg">
 <meta name="ext-resource-dependency" content="assets/roc-overleg.jpeg">
 <meta name="ext-resource-dependency" content="assets/foto-training-overleg.jpeg">
-<meta name="ext-resource-dependency" content="assets/team-herwin.png">
+<meta name="ext-resource-dependency" content="assets/opt/team-herwin.jpg">
 <meta name="ext-resource-dependency" content="assets/team/melvin.jpg">
 <meta name="ext-resource-dependency" content="logo.png">
 </head>
@@ -96,7 +101,7 @@
       { kop: 'Waarom dit voor jouw organisatie telt', tekst: 'Wie dit goed regelt, heeft over twee jaar mensen die meebewegen met nieuwe technologie in plaats van erop te wachten. Dat is het verschil tussen een organisatie die digitaal fit is en een organisatie die steeds opnieuw een inhaalslag maakt.' },
     ];
     const meer = alle.filter((x) => x.id !== a.id).slice(0, 3).map((m) => ({ ...m, href: 'Artikel v4.dc.html?a=' + m.id }));
-    return { a: { ...a, auteurRol: rol, auteurFoto: a.auteur === 'Melvin van Puffelen' ? 'assets/team/melvin.jpg' : 'assets/team-herwin.png', auteurHref: a.auteur === 'Melvin van Puffelen' ? 'Over ons v4.dc.html#melvin' : 'Over ons v4.dc.html#herwin', auteurVoornaam: (a.auteur || '').split(' ')[0], opleidingHref: 'Opleiding v4.dc.html?o=' + (op.id || ''), opleidingNaam: op.naam || 'Bekijk alle opleidingen', opleidingMeta: op.duur ? op.duur + ' · ' + op.vorm + ' · € ' + op.prijs.toLocaleString('nl-NL') : '' }, alineas, meer };
+    return { a: { ...a, auteurRol: rol, auteurFoto: a.auteur === 'Melvin van Puffelen' ? 'assets/team/melvin.jpg' : 'assets/opt/team-herwin.jpg', auteurHref: a.auteur === 'Melvin van Puffelen' ? 'Over ons v4.dc.html#melvin' : 'Over ons v4.dc.html#herwin', auteurVoornaam: (a.auteur || '').split(' ')[0], opleidingHref: 'Opleiding v4.dc.html?o=' + (op.id || ''), opleidingNaam: op.naam || 'Bekijk alle opleidingen', opleidingMeta: op.duur ? op.duur + ' · ' + op.vorm + ' · € ' + op.prijs.toLocaleString('nl-NL') : '' }, alineas, meer };
   }
 }</script>
 </body>

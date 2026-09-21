@@ -3,9 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <script src="./support.js"></script>
 <template id="__bundler_thumbnail" data-bg-color="#1B2618"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="200" fill="#C9E265">B4A</text></svg></template>
-<meta name="ext-resource-dependency" content="assets/team-herwin.png">
+<meta name="ext-resource-dependency" content="assets/opt/team-herwin.jpg">
 <meta name="ext-resource-dependency" content="assets/team/melvin.jpg">
 <meta name="ext-resource-dependency" content="logo.png">
 </head>
@@ -52,7 +57,7 @@
   <dc-import name="Nav v4" style="position: sticky; top: 0; z-index: 100; display: block;" hint-size="100%,76px"></dc-import>
   <main id="inhoud">
   <section style="position: relative; min-height: min(72vh, 720px); display: flex; align-items: flex-end; background: #1B2618; color: #FBFAF6;">
-    <img src="assets/sfeer-presentatie.jpeg" alt="Adviseur van BIM4ALL Academie presenteert aan een groep uit de bouw" fetchPriority="high" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;">
+    <img src="assets/opt/sfeer-presentatie.jpg" alt="Adviseur van BIM4ALL Academie presenteert aan een groep uit de bouw" fetchPriority="high" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;">
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,38,24,0.1) 0%, rgba(27,38,24,0.45) 30%, rgba(27,38,24,0.8) 55%, rgba(27,38,24,0.93) 100%);"></div>
     <div style="position: relative; width: 100%; max-width: 1360px; margin: 0 auto; padding: 112px clamp(20px, 4vw, 56px) clamp(36px, 4.5vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 32px 64px; align-items: end;">
       <div style="display: flex; flex-direction: column; gap: 24px;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #A8B29C;">Over BIM4ALL Academie</span><h1 style="margin: 0; font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(40px, 5.2vw, 76px); line-height: 1.02; letter-spacing: -0.01em; text-wrap: pretty; max-width: 15ch; overflow-wrap: anywhere;">Technologie verandert het werk. Wij zorgen dat organisaties en mensen <em style="font-style: italic; color: #C9E265;">mee kunnen.</em></h1></div>
@@ -83,7 +88,7 @@
   </section>
   <section style="background: #FBFAF6; border-top: 1px solid #E6E4DC;">
     <div style="max-width: 1360px; margin: 0 auto; padding: clamp(52px, 6.5vw, 88px) clamp(20px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 40px clamp(32px, 5vw, 80px); align-items: center;">
-      <img src="assets/brummelhuis-revit.jpeg" alt="Modelleur werkt in Revit aan een bouwproject" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;">
+      <img src="assets/opt/brummelhuis-revit.jpg" alt="Modelleur werkt in Revit aan een bouwproject" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;">
       <div style="display: flex; flex-direction: column; gap: 20px;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7263;">Van praktijk naar kennis, en terug</span><h2 style="margin: 0; font-family: 'Newsreader', serif; font-size: clamp(32px, 3.4vw, 48px); font-weight: 500; line-height: 1.08; text-wrap: pretty; color: #1B2618;">Wat we leren in projecten, brengen we naar organisaties. En andersom.</h2><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5246; max-width: 52ch;">BIM4ALL Projects werkt dagelijks aan engineering, BIM, digitale projectinformatie, data, digitalisering en projectregie in echte bouwprojecten. Onze trainers en consultants staan daar middenin. Wat daar werkt, of juist niet, komt terug in onze opleidingen en adviezen. Wat we bij organisaties leren over veranderen en leren, nemen we weer mee naar de projecten.</p><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5246; max-width: 52ch;">Zo blijft onze kennis actueel, en blijven onze adviezen uitvoerbaar.</p></div>
     </div>
   </section>
@@ -105,7 +110,7 @@
           </div>
         </article>
         <article id="herwin" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px clamp(24px, 3vw, 48px); padding: clamp(28px, 3vw, 40px) 0; border-top: 1px solid #1B2618;">
-          <img src="assets/team-herwin.png" alt="Herwin Voortman" loading="lazy" style="width: 100%; max-width: 360px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; display: block; background: #E6E4DC;">
+          <img src="assets/opt/team-herwin.jpg" alt="Herwin Voortman" loading="lazy" style="width: 100%; max-width: 360px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; display: block; background: #E6E4DC;">
           <div style="display: flex; flex-direction: column; gap: 16px; grid-column: span 2;">
             <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Newsreader', serif; font-size: clamp(26px, 2.4vw, 34px); font-weight: 500; line-height: 1.1;">Herwin Voortman</span><span style="font-size: 15px; color: #6B7263;">Trainer en consultant digitalisering</span></div>
             <div style="display: grid; grid-template-columns: minmax(100px, 140px) minmax(0, 1fr); gap: 10px 20px; font-size: 15px; line-height: 1.55; border-top: 1px solid #E6E4DC; padding-top: 14px;">

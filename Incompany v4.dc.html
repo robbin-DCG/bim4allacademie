@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <script src="./support.js"></script>
 <template id="__bundler_thumbnail" data-bg-color="#1B2618"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="200" fill="#C9E265">B4A</text></svg></template>
 <meta name="ext-resource-dependency" content="assets/team/melvin.jpg">
-<meta name="ext-resource-dependency" content="assets/team-herwin.png">
-<meta name="ext-resource-dependency" content="assets/team-celeste.png">
+<meta name="ext-resource-dependency" content="assets/opt/team-herwin.jpg">
+<meta name="ext-resource-dependency" content="assets/opt/team-celeste.jpg">
 <meta name="ext-resource-dependency" content="logo.png">
 </head>
 <body>
@@ -246,8 +251,8 @@ class Component extends DCLogic {
     const faq = this.faqData().map((f, i) => ({ ...f, open: this.state.faqOpen === i, teken: this.state.faqOpen === i ? '−' : '+', toggle: () => this.setState((s) => ({ faqOpen: s.faqOpen === i ? -1 : i })) }));
     const team = [
       { naam: 'Melvin van Puffelen', rol: 'Directeur BIM4ALL Academie', vraag: 'Voor vragen over leerpaden, organisatieprogramma\'s, partnerships en subsidie.', tel: 'tel:+31634274873', telTekst: '06 342 748 73', mail: 'mailto:melvin@bim4all.com', mailTekst: 'melvin@bim4all.com', klanten: 'Hollander Techniek, ROC van Twente, Vastbouw', foto: 'assets/team/melvin.jpg' },
-      { naam: 'Herwin Voortman', rol: 'Trainer en consultant digitalisering', vraag: 'Voor vragen over BIM, Revit, modelcontrole en AI in werkvoorbereiding.', tel: 'tel:+31548376797', telTekst: '0548 37 67 97', mail: 'mailto:herwin@bim4all.com', mailTekst: 'herwin@bim4all.com', klanten: 'Brummelhuis, Hoppenbrouwers, Vastbouw', foto: 'assets/team-herwin.png' },
-      { naam: 'Celeste', rol: 'Onderwijskundige', vraag: 'Voor vragen over blended leren, leerpaden per functie en de leeromgeving.', tel: 'tel:+31548376797', telTekst: '0548 37 67 97', mail: 'mailto:info.academie@bim4all.com', mailTekst: 'info.academie@bim4all.com', klanten: 'ROC van Twente, Hollander Techniek', foto: 'assets/team-celeste.png' },
+      { naam: 'Herwin Voortman', rol: 'Trainer en consultant digitalisering', vraag: 'Voor vragen over BIM, Revit, modelcontrole en AI in werkvoorbereiding.', tel: 'tel:+31548376797', telTekst: '0548 37 67 97', mail: 'mailto:herwin@bim4all.com', mailTekst: 'herwin@bim4all.com', klanten: 'Brummelhuis, Hoppenbrouwers, Vastbouw', foto: 'assets/opt/team-herwin.jpg' },
+      { naam: 'Celeste', rol: 'Onderwijskundige', vraag: 'Voor vragen over blended leren, leerpaden per functie en de leeromgeving.', tel: 'tel:+31548376797', telTekst: '0548 37 67 97', mail: 'mailto:info.academie@bim4all.com', mailTekst: 'info.academie@bim4all.com', klanten: 'ROC van Twente, Hollander Techniek', foto: 'assets/opt/team-celeste.jpg' },
     ];
     const uur = new Date().getHours(), werkdag = new Date().getDay() >= 1 && new Date().getDay() <= 5;
     const belofte = werkdag && uur >= 8 && uur < 17 ? 'Melvin belt je vandaag nog.' : 'Melvin belt je de volgende werkdag voor 10.00 uur.';

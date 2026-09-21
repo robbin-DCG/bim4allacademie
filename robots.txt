@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.bim4all-academie.nl/sitemap.xml

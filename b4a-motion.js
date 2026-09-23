@@ -52,3 +52,6 @@
   function start(){ fix(document); mo.observe(document.body, { childList: true, subtree: true }); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
+
+// SEO: canonical + og:url volgen de detailparameter (?o=, ?a=, ?id=) zodat elke detailpagina een eigen URL heeft.
+(function b4aCanonical(){ try { var q = new URLSearchParams(location.search); var key = ['o','a','id'].find(function(k){ return q.get(k); }); if (!key) return; var c = document.querySelector('link[data-b4a-canonical]'); var og = document.querySelector('meta[data-b4a-ogurl]'); if (!c) return; var u = c.getAttribute('href').replace(/\/$/, '') + '?' + key + '=' + encodeURIComponent(q.get(key)); c.setAttribute('href', u); if (og) og.setAttribute('content', u); } catch (e) {} })();

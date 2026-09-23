@@ -1,3 +1,14 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.bim4all-academie.nl/sitemap.xml
+
+# AI-crawlers expliciet toegestaan (GEO): laat modellen de inhoud lezen en citeren.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://bim4all-academie.com/sitemap.xml

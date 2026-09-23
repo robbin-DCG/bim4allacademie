@@ -1,0 +1,49 @@
+# BIM4ALL Academie
+
+> Kennis- en transformatiepartner voor bouw, installatie en vastgoed in Nederland (Rijssen, sinds 2013, onderdeel van Digital Construction Group). Drie diensten: Strategy (richting), Transformation (verandering in het werk) en Capability (mensen en teams opleiden). Onderwerpen: BIM, digitalisering, AI in de bouw, leren en ontwikkelen, soft skills.
+
+## Diensten
+- [Strategy](https://bim4all-academie.com/strategy): digitale scan, roadmap, AI-beleid voor directie en MT.
+- [Transformation](https://bim4all-academie.com/transformation): processen, software en adoptie doorvoeren in het dagelijkse werk.
+- [Capability](https://bim4all-academie.com/capability): opleidingen, leerpaden per functie, incompany.
+- [Digital Fit Partnership](https://bim4all-academie.com/voor-organisaties): meerjarige samenwerking met één organisatie, vanaf €24.000 per jaar, kwartaalritme met directie en HR.
+- [BIM4ALL Kring](https://bim4all-academie.com/kring): besloten netwerk voor BIM-managers, BIM-coördinatoren, digital leads en innovatiemanagers; vier intervisies per jaar, online kennislaag, expertuur per kwartaal; €1.000 per jaar, eerste jaar inbegrepen bij de opleiding BIM-coördinator. Los van Digital Fit.
+- [AI in de bouw](https://bim4all-academie.com/ai): begin niet met AI, begin met wat je wilt bereiken.
+- [Incompany](https://bim4all-academie.com/incompany): trainingen en leerpaden op locatie, ook interne academy.
+
+## Opleidingen (klassikaal in Utrecht of incompany)
+- [AI in de bouwpraktijk](https://bim4all-academie.com/opleiding-ai-bouwpraktijk): AI & digitalisering, 1 dag.
+- [AI voor management en directie](https://bim4all-academie.com/opleiding-ai-management): AI & digitalisering, ½ dag.
+- [Slimmer werken met Copilot](https://bim4all-academie.com/opleiding-copilot): AI & digitalisering, 2 × 2 uur.
+- [AI-beleid en verantwoord gebruik](https://bim4all-academie.com/opleiding-ai-beleid): AI & digitalisering, 1 dag.
+- [Revit Architecture basis](https://bim4all-academie.com/opleiding-revit-arch): BIM & software, 3 dagen.
+- [Revit MEP voor installateurs](https://bim4all-academie.com/opleiding-revit-mep): BIM & software, 3 dagen.
+- [Solibri modelcontrole](https://bim4all-academie.com/opleiding-solibri): BIM & software, 2 dagen.
+- [Autodesk Construction Cloud](https://bim4all-academie.com/opleiding-acc): BIM & software, 1 dag.
+- [BIM-coördinator](https://bim4all-academie.com/opleiding-bim-coordinator): Data & informatie, 5 dagen.
+- [Informatiemanagement en ILS](https://bim4all-academie.com/opleiding-ils): Data & informatie, 2 dagen.
+- [Data-analyse met Power BI](https://bim4all-academie.com/opleiding-powerbi): Data & informatie, 2 dagen.
+- [Communiceren in projecten](https://bim4all-academie.com/opleiding-communiceren): Mens & samenwerking, 2 dagen.
+- [Feedback en eigenaarschap](https://bim4all-academie.com/opleiding-feedback): Mens & samenwerking, 1 dag.
+- [Samenwerken in de digitale keten](https://bim4all-academie.com/opleiding-keten): Mens & samenwerking, 1 dag.
+- [Leidinggeven aan digitale verandering](https://bim4all-academie.com/opleiding-leidinggeven): Leiderschap & verandering, 2 dagen.
+- [Adoptie van nieuwe werkwijzen](https://bim4all-academie.com/opleiding-adoptie): Leiderschap & verandering, 1 dag.
+- [Coachend leiderschap](https://bim4all-academie.com/opleiding-coachend): Leiderschap & verandering, 3 dagen.
+- [Werkvoorbereider 2.0](https://bim4all-academie.com/opleiding-werkvoorbereider): Functiegericht, 6 dagen.
+- [BIM-modelleur](https://bim4all-academie.com/opleiding-modelleur): Functiegericht, 8 dagen.
+- [Projectleider in een digitale organisatie](https://bim4all-academie.com/opleiding-projectleider): Functiegericht, 4 dagen.
+
+## Artikelen
+- [Praktische AI in de bouw: wat werkt vandaag al, en wat nog niet](https://bim4all-academie.com/artikel-ai-wat-werkt-vandaag)
+- [Human in the loop: waarom adoptie belangrijker is dan technologie](https://bim4all-academie.com/artikel-human-in-the-loop)
+- [Van skills gap naar leercultuur: zo bouw je een lerende organisatie](https://bim4all-academie.com/artikel-van-skills-gap-naar-leercultuur)
+- [Welke functies in de bouw veranderen door AI, en wat dat vraagt van HR](https://bim4all-academie.com/artikel-functies-veranderen)
+- [Een ILS die de keten ook echt gebruikt](https://bim4all-academie.com/artikel-ils-in-de-praktijk)
+- [Digitaal samenwerken is vooral samenwerken](https://bim4all-academie.com/artikel-samenwerken-digitale-keten)
+
+## Overig
+- [Referenties en klantverhalen](https://bim4all-academie.com/referenties): Brummelhuis, Hollander Techniek, Hoppenbrouwers Techniek, ROC van Twente, Vastbouw.
+- [Sessies en events](https://bim4all-academie.com/events)
+- [Zelfscan digitale fitheid](https://bim4all-academie.com/zelfscan)
+- [Werken bij](https://bim4all-academie.com/werken-bij)
+- [Contact](https://bim4all-academie.com/contact): 0548 37 67 97, info.academie@bim4all.com, Nijverdalseweg 133, 7461 AG Rijssen. Reactie dezelfde werkdag.

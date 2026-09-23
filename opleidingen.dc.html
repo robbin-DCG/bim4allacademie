@@ -192,7 +192,7 @@ class Component extends DCLogic {
   schema(alle) {
     if (!alle.length) return;
     if (!this._ld) { this._ld = document.createElement('script'); this._ld.type = 'application/ld+json'; document.head.appendChild(this._ld); }
-    this._ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: alle.map((o, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Course', name: o.naam, description: o.belofte, url: 'https://www.bim4all-academie.nl/opleidingen/' + o.id, provider: { '@type': 'Organization', name: 'BIM4ALL Academie' }, offers: { '@type': 'Offer', price: o.prijs, priceCurrency: 'EUR', category: 'Paid' }, hasCourseInstance: o.data.map((d) => ({ '@type': 'CourseInstance', courseMode: o.vorm === 'Online' ? 'Online' : (o.vorm === 'Blended' ? 'Blended' : 'Onsite'), startDate: d, courseWorkload: 'P' + (o.aantalDagen || 1) + 'D' })) } })) });
+    this._ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: alle.map((o, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Course', name: o.naam, description: o.belofte, url: 'https://bim4all-academie.com/opleiding-' + o.id, provider: { '@type': 'Organization', name: 'BIM4ALL Academie' }, offers: { '@type': 'Offer', price: o.prijs, priceCurrency: 'EUR', category: 'Paid' }, hasCourseInstance: o.data.map((d) => ({ '@type': 'CourseInstance', courseMode: o.vorm === 'Online' ? 'Online' : (o.vorm === 'Blended' ? 'Blended' : 'Onsite'), startDate: d, courseWorkload: 'P' + (o.aantalDagen || 1) + 'D' })) } })) });
   }
   renderVals() {
     const alle = window.B4A_OPLEIDINGEN || [];
